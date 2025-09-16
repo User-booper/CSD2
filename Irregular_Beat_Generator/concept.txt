@@ -1,0 +1,51 @@
+---- PROCEDURAL GENERATION TECHNIQUES ------ 
+Perlin Noise, waarde van de noise bepaalt hoelang de duratie is van noten die afspelen, hoge waardes betekenen langere noten en lagere waardes kortere.
+
+
+
+---- Voordeel perlin boven random noise ---- 
+Perlin blijft random maar heeft soepelere overgangen dan random, opeenvolgende getallen zijn meer aan elkaar gerelateerd.
+
+
+
+----- Variabelen --------------------------
+Tijd
+Increment - Schaal waarop de golf wordt weergegeven, hoe lager de increment hoe hoger de samenhang tussen waardes, hoe hoger de increment hoe meer de perlin noise op white noise begint te lijken
+Frequency - Aantal keer dat een golf wordt afgelezen, wordt gecontroleerd door het increment.
+Amplitude - Waarde tussen 0 en 1; kans op afspelen noot? (En dus ook duratie, Noot een speelt af tot noot 2 begint)
+Octaven, meerdere lagen perlin noise generen die over elkaar heen gelegd worden en waarvan het gemiddelde de uiteindelijke grafiek bepaalt, kan zorgen voor meer dynamiek.
+
+
+----Implementation -------------------------
+
+bronnen: 
+https://codepen.io/OliverBalfour/post/procedural-generation-part-1-1d-perlin-noise 
+https://www.scratchapixel.com/lessons/procedural-generation-virtual-worlds/procedural-patterns-noise-part-1/creating-simple-1D-noise.html
+
+PRNG (Psuedo-random number generator)
+
+Genereert een seed, doordat op deze manier een seed wordt gegenereerd kan een beat bij dezelfde seed opnieuw afgespeeld worden, omdat bij dezelfde input deze formule hetzelfde antwoord geeft. Manier van generenen; Linear Congruential Generator (LCG)
+
+of 
+
+De gebruiker vult een seed in, dit heeft als voordeel dat dezelfde beat bij dezelfde seed wordt afgespeeld.
+
+
+
+ --------------------------FLOWCHART --------------------------
+
+De seed wordt random gegenereerd / de gebruiker vult een seed, frequentie en aantal octaven in.
+
+
+Value noise wordt op vaste intervallen gegenereerd met seed en gescaled met frequentiewaarde, octaven kunnen worden toegevoegd.
+
+De Value noise wordt lineair geïnterpoleerd tussen de gegenereerde intervallen.
+
+De Value noise grafiek wordt afgerond met een smooth-step functie om het tot Perlin noise te maken. 
+
+Er word een bepaald aantal punten van de functie afgelezen, om de nootduraties van de low mid en hoog lagen te gaan vormen.
+
+De noise waarden worden over een bepaalde tijd uitgedrukt als duratie van de noten die worden afgespeeld (waardes moeten dus van een schaal van 0 - 1 gepakt worden naar een meer bruikbare schaal).
+
+
+Beat wordt afgespeeld. Gebruiker wordt gevraagd of die de beat wilt opslaan als MIDI-file, opnieuw een beat wilt generen of het programma wilt afbreken
