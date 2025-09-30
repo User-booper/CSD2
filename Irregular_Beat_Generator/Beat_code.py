@@ -1,0 +1,52 @@
+#Irregular_Beat_Generator
+import math
+import pygame as pg
+#Math library voor het berekenen van de interpolatiefunties etc.
+#Pygame library voor het afspelen van geluid
+
+#TO DO: Met PRNG Waardes aan punten t = 1, 2, 3, ...9 toeschrijven.
+# PRNG: LCG
+#Variabelen: 
+#a = vermenigvuldigingsfactor = 1664525
+#b = increment = 1013904223
+#m = modulus = 2**31 -1
+
+#LCG: vorm functie:
+# y(n+1) = a * y(n) + b % m
+# LCG functie; takes in amount of numbers that need to be generated and a seed.
+seed = int(input( "Enter a random number: "))
+
+def LCG(amount_of_numbers, seed):
+  a = 1664525
+  b = 10013904223
+  m = 2**31 - 1 
+  
+  for i in range(0, amount_of_numbers):
+    num = (a * seed + b) % m #berekent num0 en voegt deze toe aan een lijst
+    lcg_numbers = []
+    lcg_number.append(num)
+
+
+    seed = num #de seed voor de volgende iteratie wordt het vorige getal
+    
+   
+
+  return lcg_numbers
+
+
+#TO DO: Lineaire Interpolatie tussen punten op vaste intervallen
+#Linear Interpolation
+def linearInterpolate(y1, y2, mu):
+  return (y2 - y1) * mu + y1
+
+
+#TO DO: Afronding van lineaire grafiek.
+#Cosine Step Interpolation
+def cosineInterpolate(y1, y2, mu):
+  angle = mu * math.pi 
+  mu2 = (1.0f - cos(angle)) * 0.5f # get new x-value based on cosine function
+  return linearInterpolate(y1, y2, mu2)
+
+
+
+#TO DO: Manier bedenken om waardes toe te schrijven aan een grid.
