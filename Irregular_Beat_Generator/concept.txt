@@ -31,6 +31,17 @@ of
 De gebruiker vult een seed in, dit heeft als voordeel dat dezelfde beat bij dezelfde seed wordt afgespeeld.
 
 
+LCG
+y(n+1) = a * y(n) + b % m
+a = 1664525 (vermenigvuldigingsfactor)
+b = 1013904223 (increment (soms c))
+M = 2**31 - 1 (modulus)
+Seed = user input
+
+Al deze waarden moeten slim gekozen worden zodat de periode waarin niet herhaald wordt zo groot mogelijk is. Herhaling van een getal leidt namelijk altijd naar herhaling van de reeks, omdat het opvolgende getal gebaseerd op de vorige is. De periode is hoogstens M. Voor een optimale periode moet: 1. b en M relatief priem zijn. 2. a - 1 deelbaar door alle priemfactoren van m; 3. a - 1 een veelvoud is van 4 als m een veelvoud van 4 is.
+
+
+
 
  --------------------------FLOWCHART --------------------------
 

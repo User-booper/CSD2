@@ -50,3 +50,13 @@ def cosineInterpolate(y1, y2, mu):
 
 
 #TO DO: Manier bedenken om waardes toe te schrijven aan een grid.
+
+
+
+TO DOOOOOO
+
+Verandering in strategie, in plaats van lcg gebruiken voor een Perlin noise generator, value noise gebruiken voor kanswaarden afspelen van noten
+
+
+
+Du s
