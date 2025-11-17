@@ -7,7 +7,11 @@ pg.init()
 #Math library to caculate interpolation functions
 #Pygame library for playing sound
 
+BPM = int(input("Enter a BPM: "))
+#time_signature = ("Enter a time signature: ")
 
+measure_length = (60 / BPM) * 4 # 60 / bpm = beats per second * 4 amount of seconds for a measure
+print(measure_length)
 # TO DO: PRNG: LCG
 
 # LCG functie; takes in amount of numbers that need to be generated and a seed.
@@ -45,8 +49,10 @@ generated_graph_data = {
 
 
 #print(generated_graph_data)
-#TO DO: Lineaire Interpolatie between set intervals on grid.
+"""
+TO DO: Lineaire Interpolatie between set intervals on grid.
 #Linear Interpolation
+"""
 def linearInterpolate(y1, y2, mu):
   return (y2 - y1) * mu + y1
 
@@ -58,6 +64,17 @@ def cosineInterpolate(y1, y2, mu):
   mu2 = (1.0 - math.cos(angle)) * 0.5 # get new x-value based on cosine function
   return linearInterpolate(y1, y2, mu2)
 
+
+#TO DO: Generate list of steps that are played based on chance
+step_grid = []
+
+for i in range(lcg_numbers):
+  if lcg_numbers[i] >= mu[i]:
+    step_grid.append(True)
+  else:
+    step_grid.append(False)
+
+print(step_grid)
 
 
 #TO DO: Think of way to add value to gtid

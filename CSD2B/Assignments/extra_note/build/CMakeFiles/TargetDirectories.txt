@@ -1,0 +1,3 @@
+/Users/laurabreukhoven/Desktop/HKU/jaar2/CSD2/CSD2B/Assignments/2_note_class_final/build/CMakeFiles/note.dir
+/Users/laurabreukhoven/Desktop/HKU/jaar2/CSD2/CSD2B/Assignments/2_note_class_final/build/CMakeFiles/edit_cache.dir
+/Users/laurabreukhoven/Desktop/HKU/jaar2/CSD2/CSD2B/Assignments/2_note_class_final/build/CMakeFiles/rebuild_cache.dir

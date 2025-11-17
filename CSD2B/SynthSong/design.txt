@@ -1,0 +1,31 @@
+Ontwerp voor SynthSong 2B
+
+
+Ontwerp
+
+SYNTH FOCUS 
+- een simpele synth voor de basis en dan een tweede granulatie synth?
+
+
+
+
+Synth 1:
+Een simpele additieve synthesizer. 
+Gebruikers kunne het aantal en het type van oscillators instellen. Hierbij ook de verhouding in pitch tussen de twee oscillatoren (of direct de pitch van beide zelf). Volume en fase van de oscillatoren moet ook variabel zijn. (?Ik zou ook een filter willen inbouwen.?) 
+
+
+Synth 2: Met granulaire synthese lees je een buffer met een sample op verschillende posities uit dmv grains. Deze grains kunnen verschillen in hun positie in de buffer(0-1), afspeelduratie (10-300ms?), amplitude, pitch.
+Met een aantal variabelen kan de modulatie van deze parameters willekeurig gemaakt worden, bvb spread en spray (spread = positie door de buffer en spray = pitchvariatie)
+
+
+
+
+Functional design, describing the user interaction flow
+
+Functional flow diagram, the user interaction flow together with the overall processes captured in a diagram
+
+If you have chosen the SYNTH FOCUS
+
+A description of the two synthesizer designs, accommodated with a personal motivation for these two chosen designs.
+2x Audio flow diagram (one for each synthesizer design)
+2x Audio flow captured in pseudo code (one for each synthesizer design)
