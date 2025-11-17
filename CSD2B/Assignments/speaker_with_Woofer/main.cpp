@@ -31,24 +31,6 @@ Tweeter::Tweeter(float diam) {
   conePosition = 0.0f;
 }
 
-
-//added class for a woofer, with constructer woofer
-class Woofer{
-public:
-
-  Woofer();
-
-  Woofer();
-  float diameter;
-  float conePosition;
-};
-
-Woofer::Woofer();{
-  std::cout << "Woofer - constructor with float diam paramater\n";
-
-
-}
-
 class Speaker{
 public:
   Speaker();
