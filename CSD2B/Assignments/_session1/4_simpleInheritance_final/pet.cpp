@@ -2,7 +2,7 @@
 #include "animal.h"
 
 //constructor and destructor
-Pet::Pet(std::string name)
+Pet::Pet(std::string name) : Animal(name)
 {
   std::cout << "Pet::Pet - constructor, name: "
     << name << "\n";
