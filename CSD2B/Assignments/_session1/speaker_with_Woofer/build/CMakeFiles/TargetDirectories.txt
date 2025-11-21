@@ -1,0 +1,3 @@
+/Users/laurabreukhoven/Desktop/HKU/jaar2/CSD2/CSD2B/Assignments/speaker_with_Woofer/build/CMakeFiles/speaker.dir
+/Users/laurabreukhoven/Desktop/HKU/jaar2/CSD2/CSD2B/Assignments/speaker_with_Woofer/build/CMakeFiles/edit_cache.dir
+/Users/laurabreukhoven/Desktop/HKU/jaar2/CSD2/CSD2B/Assignments/speaker_with_Woofer/build/CMakeFiles/rebuild_cache.dir

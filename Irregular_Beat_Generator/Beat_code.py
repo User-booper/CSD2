@@ -87,5 +87,4 @@ plt.plot(time, chance, mu)
 plt.xlabel('Time')
 plt.ylabel("Chance")
 plt.title("Plot")
-
 plt.show()

@@ -1,4 +1,5 @@
 #include "pet.h"
+#include "animal.h"
 
 //constructor and destructor
 Pet::Pet(std::string name)
@@ -21,4 +22,7 @@ void Pet::sleep()
 void Pet::eat()
 {
   std::cout << name << " is eating\n";
+}
+void Pet::drink(){
+  std::cout << name << " is drinking\n";
 }

@@ -2,7 +2,7 @@
 #define _PET_H_
 #include <iostream>
 
-class Pet
+class Pet : public Animal
 {
 public:
   // constructor and destructor
@@ -12,6 +12,7 @@ public:
   // methods
   void sleep();
   void eat();
+  void drink();
 protected:
   std::string name;
 };

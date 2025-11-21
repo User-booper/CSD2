@@ -9,18 +9,36 @@ SYNTH FOCUS
 
 
 
+
 Synth 1:
 Een simpele additieve synthesizer. 
-Gebruikers kunne het aantal en het type van oscillators instellen. Hierbij ook de verhouding in pitch tussen de twee oscillatoren (of direct de pitch van beide zelf). Volume en fase van de oscillatoren moet ook variabel zijn. (?Ik zou ook een filter willen inbouwen.?) 
+Gebruikers kunnen het aantal van oscillators instellen. Hierbij ook de verhouding in pitch tussen de twee oscillatoren (of direct de pitch van beide zelf). Volume en fase van de oscillatoren moet ook variabel zijn. (?Ik zou ook een filter willen inbouwen.?) 
+M - 
+S
+C 
+W - Filter en envelope
 
-
-Synth 2: Met granulaire synthese lees je een buffer met een sample op verschillende posities uit dmv grains. Deze grains kunnen verschillen in hun positie in de buffer(0-1), afspeelduratie (10-300ms?), amplitude, pitch.
+Synth 2: Met granulaire synthese lees je een buffer met een sample op verschillende posities uit dmv grains. Deze grains kunnen verschillen in hun positie in de buffer(0-1), afspeelduratie (30-300ms?), amplitude, pitch.
 Met een aantal variabelen kan de modulatie van deze parameters willekeurig gemaakt worden, bvb spread en spray (spread = positie door de buffer en spray = pitchvariatie)
 
 
 
 
 Functional design, describing the user interaction flow
+Synth 1:
+User wordt geprompt voor een aantal variabelen. De pitch en het volume van oscillator 1 en dan van oscillator twee.  (Eventueel ook filter presets?).
+
+
+Synth 2:
+User wordt geprompt voor een aantal presets (een stuk of 5) met vaste waardes per preset voor
+Spread, spray, het aantal grains en grain size. De preset lopen dan van meer "ambient" / langere grain sizes, naar kortere chaotischere grains. Ook kan de gebruiker kiezen welke sample er in de buffer wordt ingeladen.
+
+Motivatie:
+Ik wil graag een simpele synth maken om de basis van audio in C++ onder de knie te krijgen en als dat goed gelukt is, de granulatie synth bouwen. Ik merk dat ik daar erg geïnteresseerd in ben en heel enthousiast wordt van het idee om dat te gaan programmeren. Ik denk dat de combinatie van die twee samen goed bij mijn werkwijze aansluit. Granulaire synthese is misschien iets ingewikkeld, maar omdat ik er laatst een in Max gebouwd heb begrijp ik de principes en het mechanisme al vrij goed.
+
+Plan:
+Omdat granulaire synthese een vrij ambitieus plan is, wil ik als backup een andere soort synthese achter de hand houden. En met Daan tijdens de practica kijken naar oplossingen waneer ik vastloop
+
 
 Functional flow diagram, the user interaction flow together with the overall processes captured in a diagram
 
