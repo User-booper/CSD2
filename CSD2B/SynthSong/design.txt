@@ -44,6 +44,7 @@ Psuedocode:
 Synth 1
 //Initialize amplitudes, frequencies and ADSR.
 
+
 osc1.setFreq = 220.0f;
 osc2.setFreq = 440.0f;
 
@@ -69,7 +70,7 @@ carrier.setFrequency(modulationSignal + carrierFreq);
 output = carrier.getSample();
 
 
-
+Carrier frequency = note_frequency + (modulator_signal * (mod_depth * (note_frequency * ratio)))
 
 
 
