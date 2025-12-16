@@ -22,9 +22,12 @@ struct CustomCallback : AudioCallback {
         auto [inputChannels, outputChannels, numInputChannels, numOutputChannels, numFrames] = buffer;
 
         for (int channel = 0u; channel < numOutputChannels; ++channel) {
+            //collects the synthoutput in a variable
+            float synthOutput = synth->getNextSample();
+
             for (int sample = 0u; sample < numFrames; ++sample) {
-                // write sample to buffer at channel 0, amp = 0.25
-                outputChannels[channel][sample] = synth->getNextSample();
+                // write synth output to buffer
+                outputChannels[channel][sample] = synthOutput;
             }
         }
     }

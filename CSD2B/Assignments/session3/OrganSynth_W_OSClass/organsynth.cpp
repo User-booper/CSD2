@@ -1,8 +1,12 @@
 #include "organsynth.h"
 
-OrganSynth::OrganSynth(){
+OrganSynth::OrganSynth(float sr)
+    : Synth(sr), 
+    squares {{440, sr}, {880, sr}, {1330, sr}, {1335, sr}}
+{    
   std::cout << "OrganSynth - constructor\n";
 }
+
 
 OrganSynth::~OrganSynth(){
   std::cout << "OrganSynth - destructor\n";

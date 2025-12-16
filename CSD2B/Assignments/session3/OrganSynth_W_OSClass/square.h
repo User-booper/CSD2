@@ -4,7 +4,7 @@
 #include <cmath>
 #include "oscillator.h"
 
-class Square: public Oscillator
+class Square : public Oscillator
 {
 public:
   Square (float frequency = 0, float samplerate = 44100);
