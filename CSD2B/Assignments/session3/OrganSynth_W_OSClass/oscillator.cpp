@@ -3,7 +3,7 @@
 
 Oscillator::Oscillator (float frequency, float samplerate)
   : frequency (frequency),
-  amplitude (0.25f),
+  amplitude (0.4),
   phase (0.0f),
   sample(0.0f),
   samplerate (samplerate){
@@ -15,10 +15,10 @@ Oscillator::~Oscillator(){
 }
 
 
-//getters and setters
-void Oscillator::setSamplerate(float samplerate) {
-  this->samplerate =samplerate;
-}
+// //getters and setters
+// void Oscillator::setSamplerate(float samplerate) {
+//   this->samplerate =samplerate;
+// }
 
 float Oscillator::getSample() {
   return sample;

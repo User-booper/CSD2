@@ -8,14 +8,13 @@
 class OrganSynth : public Synth{
 public: 
   explicit OrganSynth(float samplerate);
-  ~OrganSynth();
+  ~OrganSynth() override;
 
-  //void setSamplerate();
   void prepare(float samplerate) override;
   float getNextSample() override;
 
-  Square squares[4];
-  int frequencies[4] = {440, 880, 1330, 13350};
+  Square squares[3];
+  int frequencies[3] = {440, 660, 665};
   //float samplerate;
 };
 

@@ -7,7 +7,7 @@
 class Synth{
 public:
   Synth(float samplerate);
-  virtual ~Synth() = default;
+  virtual ~Synth(); // = default;
 
   virtual void prepare(float samplerate) = 0;
   virtual float getNextSample() = 0;

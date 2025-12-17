@@ -10,7 +10,7 @@ public:
   Oscillator (float frequency, float samplerate);
   ~Oscillator();
 
-  void setSamplerate(float samplerate);
+  //void setSamplerate(float samplerate);
   //return the current sample
   float getSample();
   // go to next sample
@@ -26,7 +26,7 @@ protected:
   float phase;
   float samplerate;
 
-  float amplitude { 0.25f };
+  float amplitude { 0.4f };
   float sample;
 
 };

@@ -7,7 +7,7 @@
 class Square : public Oscillator
 {
 public:
-  Square (float frequency = 0, float samplerate = 44100);
+  Square (float frequency, float samplerate); //(float frequency = 0, float samplerate = 44100);
   ~Square();
 
 protected:

@@ -11,9 +11,9 @@ void Synth::setSamplerate(float samplerate) {
   this->samplerate = samplerate;
 }
 
-// Synth::~Synth(){
-//   std::cout << "Synth - destructor\n";
-// }
+Synth::~Synth(){
+  std::cout << "Synth - destructor\n";
+}
 
 
 
