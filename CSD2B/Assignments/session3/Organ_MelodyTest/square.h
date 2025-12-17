@@ -1,0 +1,17 @@
+#ifndef _SQUARE_H_
+#define _SQUARE_H_
+#include <iostream>
+#include <cmath>
+#include "oscillator.h"
+
+class Square : public Oscillator
+{
+public:
+  Square (float frequency, float samplerate); //(float frequency = 0, float samplerate = 44100);
+  ~Square();
+
+protected:
+  void calculate();
+};
+
+#endif
