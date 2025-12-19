@@ -8,6 +8,8 @@ void Melody::prepare(int samplerate)
 {
   quarterNoteFrameDur = 60.0f / bpm * samplerate;
   updateCurrentNoteFrameDur();
+  //frameCount = 0;
+  //noteIndex = 0;
 }
 /*
  * NOTE - returning a copy of current note example,
@@ -21,7 +23,7 @@ Note Melody::getCurrentNote()
 bool Melody::tick()
 {
   frameCount++;
-
+  std::cout << "MEKODY TICK" << std::endl;
   if (frameCount >= currentNoteFrameDuration)
   {
     // fetch a new note

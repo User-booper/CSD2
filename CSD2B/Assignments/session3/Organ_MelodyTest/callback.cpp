@@ -11,7 +11,7 @@ void Callback::prepare (int samplerate)  {
 
   // set start frequency
   Note currentNote = melody.getCurrentNote();
-  synth->setFrequency(currentNote.getPitch()); //ipv square.setF()
+  synth->setFrequencies(currentNote.getPitch()); //ipv square.setF()
 }
 
 void Callback::process(AudioBuffer buffer)  {
@@ -24,18 +24,18 @@ void Callback::process(AudioBuffer buffer)  {
   for (int channel = 0; channel < numOutputChannels; ++channel) {
     for (int frame = 0; frame < numFrames; ++frame) {
       outputChannels[channel][frame] = synth->getNextSample() * amplitude;
-                                        //ipv square.getSample()
-      //square.tick();
-
+      //auto melodyHasTicked = melody.tick();
+      //std::cout << "sanity echck" << std::endl;
       // melody.tick returns true when a new note is reached
       if (melody.tick())
       {
         /* NOTE: retrieving a copy of note, would be better to use a pointer,
          * but usage of pointers is out of scope for now.
          */
+        std::cout << "New MIDI note:\n";
         Note note = melody.getCurrentNote();
-        synth->setFrequency(note.getPitch()); //was: square.setFrequency()
+        synth->setFrequencies(note.getPitch()); //was: square.setFrequency()
+        }
       }
     }
   }
-}

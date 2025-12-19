@@ -16,9 +16,9 @@ Oscillator::~Oscillator(){
 
 
 // //getters and setters
-// void Oscillator::setSamplerate(float samplerate) {
-//   this->samplerate =samplerate;
-// }
+void Oscillator::setSamplerate(float samplerate) {
+  this->samplerate =samplerate;
+}
 
 float Oscillator::getSample() {
   return sample;

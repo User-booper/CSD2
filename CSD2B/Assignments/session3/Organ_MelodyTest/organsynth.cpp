@@ -2,7 +2,7 @@
 
 OrganSynth::OrganSynth(float samplerate)
     : Synth(samplerate), 
-    squares {{440, samplerate}, {660, samplerate}, {665, samplerate}}
+    squares {{440.0f, samplerate}, {660.0f, samplerate}, {665.0f, samplerate}}
 {    
   std::cout << "OrganSynth - constructor\n";
 }
@@ -14,11 +14,20 @@ OrganSynth::~OrganSynth(){
 
 //method to initialise all the values for the square objects
 void OrganSynth::prepare(float samplerate){
-    //int frequencies[4] = {440, 880, 1330, 1350};
-    for(int i = 0; i < 3; ++i){
-    //squares[i].setSamplerate(samplerate);
-    squares[i].setFrequency(frequency * frequencymod[i]);
+  this->samplerate = samplerate;
+   //int frequencies[4] = {440, 880, 1330, 1350};
+  for(int i = 0; i < 3; ++i){
+  squares[i].setSamplerate(samplerate);
+  //squares[i].setFrequency(frequency * frequencymod[i]);
   }
+} 
+
+void OrganSynth::setFrequencies(float frequency) {
+    for (int i = 0; i < 3; ++i) {
+        float freq = frequency * frequencymod[i];
+        squares[i].setFrequency(freq);
+        std::cout << "Oscillator " << i << " frequency: " << freq << "\n";
+    }
 }
 
 //method to calculate, sum and normalise all of the square outputs

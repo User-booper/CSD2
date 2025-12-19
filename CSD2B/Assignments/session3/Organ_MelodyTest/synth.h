@@ -11,10 +11,12 @@ public:
 
   virtual void prepare(float samplerate) = 0;
   virtual float getNextSample() = 0;
+  virtual void setFrequencies(float frequency) = 0;
   void setSamplerate(float samplerate);
 
 protected:
   float samplerate;
+  //float frequency;
 };
 
 #endif

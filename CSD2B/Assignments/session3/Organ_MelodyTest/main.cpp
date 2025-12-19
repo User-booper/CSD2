@@ -1,9 +1,9 @@
 #include <iostream>
-#include "customCallback.h"
+#include "callback.h"
 
 int main() {
     ScopedMessageThreadEnabler scopedMessageThreadEnabler;
-    CustomCallback audioSource (44100);
+    Callback audioSource (44100);
     JUCEModule juceModule (audioSource);
     juceModule.init(1,1);
 

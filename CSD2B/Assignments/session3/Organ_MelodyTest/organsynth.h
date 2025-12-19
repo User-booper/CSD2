@@ -11,12 +11,14 @@ public:
   ~OrganSynth() override;
 
   void prepare(float samplerate) override;
+  void setFrequencies(float frequency) override;
   float getNextSample() override;
+
 
   Square squares[3];
   //int frequencies[3] = {440, 660, 665};
-  int frequency;
-  float frequencymod[3] = {1.0, 1.5, 1.51}; 
+  float frequency;
+  float frequencymod[3] = {1.0f, 1.5f, 1.51f}; 
   //frequencymod is the ratio of the different organsynth oscillators, compared to the root.
 };
 
