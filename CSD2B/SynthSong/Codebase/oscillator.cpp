@@ -7,11 +7,11 @@ Oscillator::Oscillator (float frequency, float amplitude, float samplerate) //fl
   phase (0.0f),
   sample(0.0f),
   samplerate (samplerate){
-    std::cout << "Oscillator - constructor\n";
+    //std::cout << "Oscillator - constructor\n";
   }
 
 Oscillator::~Oscillator(){
-  std::cout << "Oscillator - Destructor\n";
+  //std::cout << "Oscillator - Destructor\n";
 }
 
 

@@ -5,6 +5,7 @@
 #include "synth.h"
 #include "sine.h"
 
+
 /* AdditiveSynth has a maximum of six sine-oscillators.
 Array ratios defines the relationships these sines have to the variable frequency.
 
@@ -17,20 +18,20 @@ User sets Array of ratios, and amplitude and defines the frequency.
 
 class AdditiveSynth : public Synth{
 public:
-  explicit AdditiveSynth(float samplerate);
+  explicit AdditiveSynth(float samplerate, int num_osc); //float frequency, float ratios[], float amplitudes[]
   ~AdditiveSynth() override;
 
   void prepare(float samplerate) override;
   void setFrequencies(float frequency) override;
-  //void setAmplitudes();
+  void setAmplitudes(float amplitude, int index);
+  void setRatio(float ratio, int index);
   float getNextSample() override;
 
-  float ratios[6] = {1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f};
-  // float amplitudes[6] = {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f};
-  Sine sines[6];
 private:
-  //float frequency;
-  float num_osc;
-
+  Sine sines[6];
+  int num_osc;
+  float amplitudes[6] = {0.8f, 0.8f, 0.8f, 0.8f, 0.8f, 0.8f};
+  float ratios[6] = {1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f};
+  float ratio;
 };
 #endif

@@ -12,7 +12,9 @@
 
 class Callback : public AudioCallback {
 public:
+
   explicit Callback (float sampleRate);
+  ~Callback();
   void prepare (int rate) override;
   void process (AudioBuffer buffer) override;
 

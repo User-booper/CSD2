@@ -8,7 +8,9 @@ class Sine: public Oscillator
 {
 public:
   //Constructor and destructor
-  Sine(float frequency, float amplitude, float samplerate);
+  explicit Sine(float frequency = 440.0f,
+  float amplitude = 0.5f,
+  float samplerate = 44100.0f);
   ~Sine();
   
   void calculate();

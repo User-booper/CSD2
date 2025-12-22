@@ -4,11 +4,11 @@
 Square::Square(float frequency, float amplitude, float samplerate) 
   : Oscillator(frequency, amplitude, samplerate)
 {
-  std::cout << "Square - constructor\n";
+  //std::cout << "Square - constructor\n";
 }
 
 Square::~Square() {
-  std::cout << "Square - destructor\n";
+  //std::cout << "Square - destructor\n";
 }
 
 

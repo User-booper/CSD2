@@ -12,7 +12,7 @@ void Synth::setSamplerate(float samplerate) {
 }
 
 Synth::~Synth(){
-  std::cout << "Synth - destructor\n";
+  std::cout << "Synth - Destructor\n";
 }
 
 
