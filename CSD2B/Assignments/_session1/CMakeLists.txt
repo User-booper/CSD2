@@ -1,0 +1,4 @@
+add_subdirectory(4_simpleInheritance_final)
+add_subdirectory(extra_note)
+add_subdirectory(speaker_with_Woofer)
+add_subdirectory(extra_classes)

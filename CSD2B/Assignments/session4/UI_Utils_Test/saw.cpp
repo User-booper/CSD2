@@ -4,11 +4,11 @@
 Saw::Saw(float frequency, float samplerate) : frequency(frequency),
   amplitude(1.0), phase(0), sample(0), samplerate(samplerate)
 {
-  std::cout << "Sine - constructor\n";
+  std::cout << "Saw - constructor\n";
 }
 
 Saw::~Saw() {
-  std::cout << "Sine - destructor\n";
+  std::cout << "Saw - destructor\n";
 }
 
 void Saw::setSamplerate(float samplerate) {
@@ -25,9 +25,23 @@ void Saw::tick() {
   if(phase > 1.0f) {
     phase -= 1.0f;
   }
-  sample = sin(pi * 2 * phase) * amplitude;
 }
 
+void Saw::calculate() { //lineaire functie = ax, 
+  if (phase < 0.5f){
+    sample = phase * 2;
+  }
+  if (phase = 0.5f){
+    sample = 0;
+  }
+  else{
+    (phase * 2) - 1;
+  }
+}
+/* sample = phase * 2, so almost halfway through the phase the amplitude is 1, 
+at the end of the cycle it is 0 (1 - 1)
+and exactly halfway it is 0.
+*/
 //getters and setters
 void Saw::setFrequency(float frequency)
 {

@@ -23,7 +23,7 @@ Note Melody::getCurrentNote()
 bool Melody::tick()
 {
   frameCount++;
-  //std::cout << "MEKODY TICK" << std::endl; debugging code
+  std::cout << "MEKODY TICK" << std::endl;
   if (frameCount >= currentNoteFrameDuration)
   {
     // fetch a new note

@@ -10,7 +10,7 @@ public:
     ~Animal(); //destructor
 
     void walk();
-protected:
+public:
     std::string name;
 };
 

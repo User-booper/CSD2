@@ -1,20 +1,21 @@
-#ifndef _SINE_H_
-#define _SINE_H_
+#ifndef _SQUARE_H_
+#define _SQUARE_H_
 #include <iostream>
 #include <cmath>
+#include "oscillator.h"
 
-class Sine
+class Square: public Oscillator
 {
 public:
   //Constructor and destructor
-  Sine(float frequency, float samplerate = 44100);
-  ~Sine();
+  Square(float frequency, float samplerate = 44100);
+  ~Square();
   void setSamplerate(float samplerate);
   //return the current sample
   float getSample();
   // go to next sample
   void tick();
-
+  void calculate();
   //getters and setters
   void setFrequency(float frequency);
   float getFrequency();

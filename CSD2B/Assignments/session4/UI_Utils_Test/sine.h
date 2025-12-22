@@ -1,20 +1,21 @@
-#ifndef _SAW_H_
-#define _SAW_H_
+#ifndef _SINE_H_
+#define _SINE_H_
 #include <iostream>
 #include <cmath>
+#include "oscillator.h"
 
-class Saw
+class Sine: public Oscillator
 {
 public:
   //Constructor and destructor
-  Saw(float frequency, float samplerate = 44100);
-  ~Saw();
+  Sine(float frequency, float samplerate = 44100);
+  ~Sine();
   void setSamplerate(float samplerate);
   //return the current sample
   float getSample();
   // go to next sample
   void tick();
-
+  void calculate();
   //getters and setters
   void setFrequency(float frequency);
   float getFrequency();

@@ -1,0 +1,3 @@
+#add_subdirectory(SoundingSine)
+#add_subdirectory(SoundingSine_W_OscillatorClass)
+add_subdirectory(SoundingSineInheritanceTest)
