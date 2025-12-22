@@ -7,7 +7,7 @@
 class Oscillator
 {
 public:
-  Oscillator (float frequency, float samplerate);
+  Oscillator (float frequency, float amplitude, float samplerate);
   ~Oscillator();
 
   void setSamplerate(float samplerate);
@@ -21,7 +21,7 @@ public:
   float getFrequency();
 
   void setAmplitude(float amplitude);
-  float getAmplitude(float amplitude);
+  float getAmplitude();
 
 protected:
   virtual void calculate() = 0;
@@ -29,7 +29,7 @@ protected:
   float phase;
   float samplerate;
 
-  float amplitude { 0.4f };
+  float amplitude; //{ 0.4f };
   float sample;
 
 };

@@ -29,8 +29,7 @@ public:
   // float amplitudes[6] = {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f};
   Sine sines[6];
 private:
-  float frequency;
-  float samplerate;
+  //float frequency;
   float num_osc;
 
 };

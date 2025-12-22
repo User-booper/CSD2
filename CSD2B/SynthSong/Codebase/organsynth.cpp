@@ -2,7 +2,7 @@
 
 OrganSynth::OrganSynth(float samplerate)
     : Synth(samplerate), 
-    squares {{440.0f, samplerate}, {660.0f, samplerate}, {665.0f, samplerate}}
+    squares {{440.0f, 0.8f, samplerate}, {660.0f, 0.8f, samplerate}, {665.0f, 0.8f, samplerate}}
 {    
   std::cout << "OrganSynth - constructor\n";
 }

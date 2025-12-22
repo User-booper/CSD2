@@ -1,7 +1,7 @@
 #include "callback.h"
 
 Callback::Callback(float samplerate) : AudioCallback(samplerate), 
-  synth(new AdditiveSynth(samplerate)){}
+  synth(new FMSynth(samplerate)){}
 
 void Callback::prepare (int samplerate)  { 
   this->samplerate = samplerate;

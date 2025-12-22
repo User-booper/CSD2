@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 3.22)
 project(Codebase VERSION 0.0.1)
 
 juce_add_console_app(Codebase PRODUCT_NAME "Codebase")
-target_sources(Codebase PRIVATE main.cpp sine.cpp square.cpp oscillator.cpp synth.cpp additivesynth.cpp organsynth.cpp melody.cpp note.cpp callback.cpp)
+target_sources(Codebase PRIVATE main.cpp sine.cpp square.cpp oscillator.cpp synth.cpp additivesynth.cpp organsynth.cpp
+  fmsynth.cpp melody.cpp note.cpp callback.cpp)
 target_compile_definitions(Codebase PRIVATE JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0)
 
 target_link_libraries(Codebase

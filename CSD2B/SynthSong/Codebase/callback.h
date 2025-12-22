@@ -2,10 +2,10 @@
 #define CALLBACK_H
 
 #include "audiocomponent.h"
-//#include "square.h"
 #include "melody.h"
 #include "synth.h"
 #include "organsynth.h"
+#include "fmsynth.h"
 #include "additivesynth.h"
 #include "oscillator.h"
 

@@ -1,8 +1,8 @@
 #include "additivesynth.h"
 
 AdditiveSynth::AdditiveSynth(float samplerate) : Synth(samplerate),
-  sines {{440.0f, samplerate}, {440.0f, samplerate}, {440.0f, samplerate}, 
-  {440.0f, samplerate}, {440.0f, samplerate}, {440.0f, samplerate}}
+  sines {{440.0f, 0.8f, samplerate}, {440.0f, 0.8f, samplerate}, {440.0f, 0.8f, samplerate}, 
+  {440.0f, 0.8f, samplerate}, {440.0f, 0.8f, samplerate}, {440.0f, 0.8f, samplerate}}
 {
   std::cout << "AdditiveSynth - Constructor\n";
 }

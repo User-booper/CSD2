@@ -1,9 +1,9 @@
 #include "oscillator.h"
 #include "math.h"
 
-Oscillator::Oscillator (float frequency, float samplerate) //float amplitude
+Oscillator::Oscillator (float frequency, float amplitude, float samplerate) //float amplitude
   : frequency (frequency),
-  amplitude (0.4),
+  amplitude (amplitude),
   phase (0.0f),
   sample(0.0f),
   samplerate (samplerate){
@@ -41,7 +41,7 @@ void Oscillator::setAmplitude(float amplitude)
   this->amplitude = amplitude;
 }
 
-float Oscillator::getAmplitude(float amplitude)
+float Oscillator::getAmplitude()
 {
   return amplitude;
 }
