@@ -30,7 +30,5 @@ private:
   float amplitudes[6] = {0.8f, 0.8f, 0.8f, 0.8f, 0.8f, 0.8f};
   float ratios[6] = {1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f};
   float ratio;
-  // float additive;
-  // float additive_scaled;
 };
 #endif
