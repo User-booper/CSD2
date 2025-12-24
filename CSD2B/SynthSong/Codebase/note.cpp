@@ -4,12 +4,18 @@
 
 #include "note.h"
 
-Note::Note(int midiNoteNumber, float quarterNoteDuration) :
- midiNoteNumber(midiNoteNumber), quarterNoteDuration(quarterNoteDuration)
+Note::Note(int midiNoteNumber, float velocity, float quarterNoteDuration) :
+ midiNoteNumber(midiNoteNumber), 
+ velocity(velocity), 
+ quarterNoteDuration(quarterNoteDuration)
 {}
 
 int Note::getMidiNoteNumber() {
   return midiNoteNumber;
+}
+
+float Note::getVelocity(){
+  return velocity;
 }
 
 float Note::getQuarterNoteDuration() {

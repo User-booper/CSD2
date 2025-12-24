@@ -7,13 +7,18 @@ Synth::Synth(float samplerate)
   std::cout << "Synth - Constructor\n";
 }
 
+Synth::~Synth(){
+  std::cout << "Synth - Destructor\n";
+}
+
 void Synth::setSamplerate(float samplerate) {
   this->samplerate = samplerate;
 }
 
-Synth::~Synth(){
-  std::cout << "Synth - Destructor\n";
+void Synth::setVelocity(float velocity){
+  synthVelocity = velocity;
 }
+
 
 
 

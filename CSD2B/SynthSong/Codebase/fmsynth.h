@@ -19,7 +19,6 @@ class FMSynth : public Synth{
   float moddepth;
   float ratio = 3;
   //float ratio;
-  float fm;
   Sine carrier;
   Sine modulator;
 };

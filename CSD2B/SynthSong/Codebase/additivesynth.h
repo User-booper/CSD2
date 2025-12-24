@@ -9,16 +9,13 @@
 /* AdditiveSynth has a maximum of six sine-oscillators.
 Array ratios defines the relationships these sines have to the variable frequency.
 
-
 TODO:
-UIutils implementation
-User sets Array of ratios, and amplitude and defines the frequency.
-- Maybe individual phases for
+- Maybe individual phases per oscillator
 */
 
 class AdditiveSynth : public Synth{
 public:
-  explicit AdditiveSynth(float samplerate, int num_osc); //float frequency, float ratios[], float amplitudes[]
+  explicit AdditiveSynth(float samplerate, int num_osc); 
   ~AdditiveSynth() override;
 
   void prepare(float samplerate) override;
@@ -33,5 +30,7 @@ private:
   float amplitudes[6] = {0.8f, 0.8f, 0.8f, 0.8f, 0.8f, 0.8f};
   float ratios[6] = {1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f};
   float ratio;
+  // float additive;
+  // float additive_scaled;
 };
 #endif

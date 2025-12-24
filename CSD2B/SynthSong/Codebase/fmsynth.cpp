@@ -6,7 +6,8 @@
 FMSynth::FMSynth(float samplerate, float ratio, float moddepth) : Synth(samplerate),
    carrier(440.0f, 0.9f, samplerate),
    modulator(440.0f, 0.9f, samplerate),
-   ratio(ratio)
+   ratio(ratio),
+   moddepth(moddepth)
   {
   std::cout << "FMSynth - Constructor\n";
   }
@@ -28,19 +29,15 @@ void FMSynth::prepare(float samplerate){
 void FMSynth::setFrequencies(float frequency){
   for(int i = 0; i < 2; ++i){
     carrier.setFrequency(frequency);
-    modulator.setFrequency(frequency * ratio); //*2 replace with ratio later on
-    std::cout << "ratio: " << ratio << "\n";
+    modulator.setFrequency(frequency * ratio); 
   }
 }
 
-// void FMSynth::setAmplitudes(float amplitude){
-//   carrier.setAmplitude(0.8);
-//   modulator.setAmplitude(moddepth);
-// }
 
 float FMSynth::getNextSample(){
   float fm = carrier.getSample() + (modulator.getSample() * modulator.getAmplitude()); //simple fm, might implement fabians formula here later.
+  float fm_scaled = fm * synthVelocity;
   carrier.tick();
   modulator.tick();
-  return fm;
+  return fm_scaled;
 }

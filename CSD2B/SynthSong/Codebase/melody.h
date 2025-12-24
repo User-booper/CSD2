@@ -26,8 +26,8 @@ private:
   void updateCurrentNoteFrameDur();
   // Cmaj7 -  arpeggio, fixed for now, for the sake of the example
   Note melody[NUM_NOTES] = {
-    Note(60, 1.0f), Note(64, 0.5f), Note(67, 0.25f),
-    Note(71, 0.25f), Note(67, 0.25f), Note(64, 0.25f)
+    Note(60, 1.0f, 1.0f), Note(64, 0.5f, 0.5f), Note(67, 0.5f, 0.25f),
+    Note(71, 1.0f, 0.25f), Note(67, 0.5f, 0.25f), Note(64, 0.5f, 0.25f)
   };
 
   int currentNoteFrameDuration;

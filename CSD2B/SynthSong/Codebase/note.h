@@ -12,9 +12,10 @@
 class Note {
 public:
   // Detune is not supported, if required, add 'cents'
-  Note(int midiNoteNumber, float quarterNoteDuration = 1.0f);
+  Note(int midiNoteNumber, float velocity, float quarterNoteDuration = 1.0f);
 
   int getMidiNoteNumber();
+  float getVelocity();
   float getQuarterNoteDuration();
   float getPitch();
 
@@ -23,6 +24,7 @@ public:
 
 private:
   int midiNoteNumber;
+  float velocity;
   float quarterNoteDuration;
 };
 

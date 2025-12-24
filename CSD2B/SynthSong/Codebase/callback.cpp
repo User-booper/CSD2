@@ -44,8 +44,8 @@ void Callback::prepare (int samplerate)  {
     // std::cout << "Frequency (between 40Hz and 1kHz): ";
     // float UIfrequency = UIUtilities::retrieveValueInRange(40, 1000);
 
-    std::cout << "Ratio of modulator to carrier (between 1.0 and 5.0): ";
-    float UIratio = UIUtilities::retrieveValueInRange(1, 5);
+    std::cout << "Ratio of modulator to carrier (between 1.0 and 15.0): ";
+    float UIratio = UIUtilities::retrieveValueInRange(1, 15);
 
     std::cout << "Modulationdepth (between 0.0 and 1.0): ";
     float UImoddepth = UIUtilities::retrieveValueInRange(0, 1);
@@ -59,6 +59,7 @@ void Callback::prepare (int samplerate)  {
   // set start frequency
   Note currentNote = melody.getCurrentNote();
   synth->setFrequencies(currentNote.getPitch()); 
+  synth->setVelocity(currentNote.getVelocity());
 }
 
 
@@ -82,6 +83,7 @@ void Callback::process(AudioBuffer buffer)  {
 
         Note note = melody.getCurrentNote();
         synth->setFrequencies(note.getPitch()); 
+        synth->setVelocity(note.getVelocity());
         }
       }
     }

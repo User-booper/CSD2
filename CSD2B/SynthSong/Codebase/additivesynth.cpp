@@ -43,5 +43,7 @@ float AdditiveSynth::getNextSample(){
     sum += sines[i].getSample();
     sines[i].tick();
     }
-    return sum * (1.0f / num_osc);
+    float additive = sum * (1.0f / num_osc);
+    float additive_scaled = sum * synthVelocity;
+    return additive_scaled;
 }
