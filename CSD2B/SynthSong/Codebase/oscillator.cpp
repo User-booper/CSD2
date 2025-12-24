@@ -26,7 +26,6 @@ float Oscillator::getSample() {
 
 void Oscillator::setFrequency(float frequency)
 {
-  // TODO add check to see if parameter is valid
   this->frequency = frequency;
 }
 
@@ -37,7 +36,6 @@ float Oscillator::getFrequency()
 
 void Oscillator::setAmplitude(float amplitude)
 {
-  // TODO add check to see if parameter is valid
   this->amplitude = amplitude;
 }
 
@@ -48,7 +46,6 @@ float Oscillator::getAmplitude()
 
 //method to increment and wrap the phase.
 void Oscillator::tick(){
-  //std::cout << "Oscillator tick()\n";
   phase += frequency / samplerate;
   if(phase > 1.0f) {
     phase -= 1.0f;

@@ -11,9 +11,9 @@ public:
   ~Oscillator();
 
   void setSamplerate(float samplerate);
-  //return the current sample
+  //returns the current sample
   float getSample();
-  // go to next sample
+  // goes to next sample
   void tick();
 
   //setters and getters.
@@ -29,7 +29,7 @@ protected:
   float phase;
   float samplerate;
 
-  float amplitude; //{ 0.4f };
+  float amplitude; 
   float sample;
 
 };

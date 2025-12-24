@@ -13,12 +13,9 @@ class FMSynth : public Synth{
   void setFrequencies(float frequency) override;
   float getNextSample() override;
 
-  // void setAmplitudes(float amplitude);
-
   private:
   float moddepth;
   float ratio = 3;
-  //float ratio;
   Sine carrier;
   Sine modulator;
 };

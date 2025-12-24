@@ -33,7 +33,7 @@ void FMSynth::setFrequencies(float frequency){
   }
 }
 
-
+//calculates the next sample and ticks the modulator and carrier.
 float FMSynth::getNextSample(){
   float fm = carrier.getSample() + (modulator.getSample() * modulator.getAmplitude()); //simple fm, might implement fabians formula here later.
   float fm_scaled = fm * synthVelocity;

@@ -41,11 +41,8 @@ void Callback::prepare (int samplerate)  {
   if (synthSelection == 1){
     std::cout << "Chosen synth: FREQUENCY MODULATION \n";
 
-    // std::cout << "Frequency (between 40Hz and 1kHz): ";
-    // float UIfrequency = UIUtilities::retrieveValueInRange(40, 1000);
-
-    std::cout << "Ratio of modulator to carrier (between 1.0 and 15.0): ";
-    float UIratio = UIUtilities::retrieveValueInRange(1, 15);
+    std::cout << "Ratio of modulator to carrier (between 1.0 and 10.0): ";
+    float UIratio = UIUtilities::retrieveValueInRange(1, 10);
 
     std::cout << "Modulationdepth (between 0.0 and 1.0): ";
     float UImoddepth = UIUtilities::retrieveValueInRange(0, 1);
