@@ -11,7 +11,7 @@ A realtime multi-effect console application that can be controlled through OSC b
 
 Choice of effects:
 - Onepole (RC) Filter / LFO-base auto-panner (1pt)
-- Datorro Reverb (2pts)
+- Dattorro Reverb (2pts)
 - Bitcrusher (1pt)
 
 
@@ -32,3 +32,6 @@ Effect mapping
 - LFO auto-panner rate moving from low to high
 - Datorro reverb, dry-wet and time going from high to low
 - Bitcrusher, sample rate going from high to low, 
+
+
+Blokdiagram uitwerken.
