@@ -1,0 +1,34 @@
+Assignment:
+
+Design and implement (in C++) a multi-effect of which multiple effect parameters can be controlled by one overarching parameter, thus via a "single gesture".
+
+I've chosen "Custom Focus":
+
+A realtime multi-effect console application that can be controlled through OSC by one 'gesture' with a custom-made controller over OSC in the real world.
+
+(Requires a custom design for a controller)
+
+
+Choice of effects:
+- Onepole (RC) Filter / LFO-base auto-panner (1pt)
+- Datorro Reverb (2pts)
+- Bitcrusher (1pt)
+
+
+
+Overall design (Thorough interaction design document of the customary designed controller)
+- E-textile?
+
+E-textile controller
+- Patch of knitted fabric as stretch sensor test ?
+Knitted stretch sensors are made of a knit fabric of conductive yarns, or alternatively from a non-conductive knit fabric coated in a conductive polymer. As they stretch they change their resistance because the stretching creates more contact points between the interlocked loops (stitches). In the above picture the stretch sensor is knitted from stainless steel and polyester yarn.
+
+(From: https://blog.bela.io/e-textiles-and-embodied-interaction-with-bela/)
+
+
+
+Effect mapping
+- Lowpass Filter cutoff point moving from low to high
+- LFO auto-panner rate moving from low to high
+- Datorro reverb, dry-wet and time going from high to low
+- Bitcrusher, sample rate going from high to low, 
