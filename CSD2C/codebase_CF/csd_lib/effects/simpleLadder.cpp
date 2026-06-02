@@ -8,7 +8,7 @@ simpleLadder::simpleLadder(float coefficient, float dryWet)
 }
 
 simpleLadder::~simpleLadder(){
-    std::cout << "only snakes left" << "/endl";
+    std::cout << "only snakes left" << "\n";
 }
 
 float simpleLadder::process(float input){

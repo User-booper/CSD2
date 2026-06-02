@@ -12,7 +12,7 @@ Bitcrusher::Bitcrusher(float bitDepth, float dryWet)
 
 // Destructor
 Bitcrusher::~Bitcrusher() {
-    std::cout << "this bit has been crushed" << "/endl";
+    std::cout << "this bit has been crushed" << "\n";
 }
 
 // Set bit depth and recompute QL

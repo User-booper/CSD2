@@ -42,7 +42,7 @@ TODO make a handle_note_event function that
 """
 def handle_note_event(sample):
     sample.set_volume(1)
-    sample.play
+    sample.play()
 
 start_time = time.time()
 time_now = time.time() - start_time 
@@ -55,9 +55,5 @@ for timestamp in snare_events["timestamps"]:
    time.sleep(0.5)
 
    
-"""
-time.sleep(0.5)
-snare.set_volume(1)
-snare.play
 
-"""
+

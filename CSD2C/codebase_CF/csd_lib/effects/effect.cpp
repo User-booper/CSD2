@@ -26,8 +26,8 @@ float Effect::getSample()
 void Effect::setDryWet(float dryWet)
 {
   if(dryWet < 0 || dryWet > 1) {
-    throw "Effect::setDryWet - dryWet value is not in range [0, 1]";
-  }
+   throw "Effect::setDryWet - dryWet value is not in range [0, 1]";
+ }
   this->dryWet = dryWet;
   // cache 1.0 - dryWet used to calculate mix of dry wet signal
   wetDry = 1.0f - dryWet;

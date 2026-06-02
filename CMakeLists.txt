@@ -2,5 +2,5 @@ cmake_minimum_required(VERSION 3.20)
 project(CSD LANGUAGES CXX)
 
 add_subdirectory(JUCE)
-add_subdirectory(CSD2B)
-#add_subdirectory(csd2c)
+#add_subdirectory(CSD2B)
+add_subdirectory(CSD2C)

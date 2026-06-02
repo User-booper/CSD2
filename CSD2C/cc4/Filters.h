@@ -92,7 +92,12 @@ private:
 class SimpleLadder :  public Filter {
     public:
     float process(float input) override {
-
+        A = b * input (a * A);
+        B = b * A (a * B);
+        C = b * B (a * C);
+        D = b * C (a * D);
+        return D;
+        
     }
 
     void setCoefficient(float coefficient) {

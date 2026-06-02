@@ -4,6 +4,8 @@
 #include <audiocomponent.h>
 #include "osc_server.h"
 #include <sine.h>
+#include <square.h>
+#include <saw.h>
 #include "bitcrusher.h"
 #include "simpleLadder.h"
 
@@ -15,13 +17,18 @@ public:
 
 private:
   float sampleRate = 44100.f;
-  float targetParameter { 440.f };
+  float targetParameter { 0.5f };
 
   Sine sine; 
+  Square square;
   Bitcrusher bitcrusher;
   simpleLadder filter;
   LocalOSC oscServer { targetParameter };
   std::string serverport {"7777"};
+
+  float lerp (float factor, float a, float b){
+    return a + (b - a) * factor;
+  }
 
 };
 
